@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script type="text/javascript"src="javascripts/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="javascripts/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery.effects.core.js"></script>
+    <link href="stylesheets/jquery-ui/jquery-ui-custom.css" rel="stylesheet" type="text/css"></script>	
+		<script>
+				$(document).ready(function () {	
+					$(".contents").hide();
+					
+					$(".ui-icon-triangle-1-s").hide();
+       		$(".ui-icon-triangle-1-e").click(function () {
+						$(this).toggleClass("ui-icon-triangle-1-s");
+						$(this).next().slideToggle().next().slideToggle();
+					});
+					$(".expand").click(function(){
+						$(".contents").show();
+						$(".colorpane").hide();
+						
+						$(".abc").switchClass("ui-icon-triangle-1-e","ui-icon-triangle-1-s");
+					});
+					$(".collapse").click(function(){
+						$(".contents").hide();
+						$(".colorpane").show();
+					
+						$(".abc").switchClass("ui-icon-triangle-1-s","ui-icon-triangle-1-e");
+					});					
+
+});
+		</script>
+		
+	</head>
+	<body>
+			<div class="expand">expand all</div>
+			<div class="collapse">collapse all</div>
+			     <div id="open">
+						<h3 class="ui-icon ui-icon-triangle-1-e abc" style="border: 1px solid;">
+																											<a href="#"  style="width: 500px; height: 50px;" ></a> </h3>	  
+						<div class="colorpane" style="background: red; border: 1px solid; width: 500px; height: 20px;">   </div>
+						<div class="contents" style="border: 1px solid; border: 1px solid; width: 500px; height: 100px;">	contents1		</div>
+
+
+						<h3 class="ui-icon ui-icon-triangle-1-e abc" style="border: 1px solid;">
+																											<a href="#"  style="width: 500px; height: 50px;" ></a> </h3>	  
+						<div class="colorpane" style="background: red; border: 1px solid; width: 500px; height: 20px;">   </div>
+						<div class="contents" style="border: 1px solid; border: 1px solid; width: 500px; height: 100px;">	contents2		</div>
+            
+						<h3 class="ui-icon ui-icon-triangle-1-e abc" style="border: 1px solid;">
+																											<a href="#"  style="width: 500px; height: 50px;" ></a> </h3>
+						<div class="colorpane" style="background: red; border: 1px solid; width: 500px; height: 20px;">   </div>
+						<div class="contents" style="border: 1px solid; border: 1px solid; width: 500px; height: 100px;">	contents3		</div>
+					</div>
+	</body>
+</html>
+
+
